@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  color: #090a0a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1470px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  margin: 0 auto;
+  max-width: 1310px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.menu {
+  padding: 100px 0px;
+  color: #090a0a;
+  margin-right: 20px;
+}
+
+.menu__item:last-child {
+  color: #939596;
+  margin-left: 48px;
+}
+
+.menu__item {
+  font-size: 20px;
+  line-height: 29px;
+  text-decoration: none;
+  color: #090a0a;
+  position: relative;
+  transition: all ease 0.3s;
+}
+
+.menu__item:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: -2px;
+  background-color: #090a0a;
+  transition: width 0.7s ease 0s, left 0.7s ease 0s;
+  width: 0;
+  left: 0;
+}
+
+.menu__item:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.content {
+  max-width: 1310px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.content__title {
+  margin-bottom: 40px;
+  font-size: 36px;
+  line-height: 50px;
+  max-width: 650px;
+  width: 100%;
+}
+
+.content__card--img {
+  width: 100%;
+}
+
+.content__card--img-large {
+  max-width: 1280px;
+  width: 100%;
+  min-height: 500px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.content__card--paragraph {
+  margin-bottom: 4px;
+  font-size: 20px;
+  line-height: 29px;
+  display: flex;
+  position: relative;
+  transition: all ease 0.5s;
+  max-width: 132px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.content__card--text {
+  margin-bottom: 60px;
+  color: #7c7e80;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+  position: relative;
+  transition: all ease 1s;
+  max-width: 132px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.content__card--text-first {
+  margin-bottom: 70px;
+}
+
+.content__card--paragraph:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: 12px;
+  background-color: #090a0a;
+  width: 0;
+  left: 138px;
+}
+
+.content__card--text:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: 8px;
+  background-color: #090a0a;
+  width: 0;
+  left: 134px;
+}
+
+.content__card--paragraph:hover::before {
+  left: 138px;
+  width: 25px;
+}
+
+.content__card--text:hover::before {
+  left: 134px;
+  width: 25px;
+}
+
+.wrapper {
+  grid-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content__card--img-small {
+  max-width: 413px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  transition: all ease 0.5s;
+}
+
+.content__card--img-small:hover {
+  transform: translateY(-5%);
+}
+
+.social {
+  max-width: 1310px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 13px 15px 0 15px;
+}
+
+.social--wrapper {
+  padding-top: 20px;
+  margin-bottom: 43px;
+}
+
+.personal {
+  background-color: #292f32; 
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;  
+  padding-bottom: 108px;
+}
+
+.personal__avatar {
+  object-fit: cover;
+  padding-top: 106px;
+  margin-bottom: 44px;
+  max-width: 144px;
+  width: 100%;
+}
+
+.personal__title {
+  font-size: 28px;
+  line-height: 29px;
+  color: #fcfcfc;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+}
+
+.personal__text {
+  font-size: 17px;
+  line-height: 27px;
+  color: #fcfcfc;
+  max-width: 631px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 875px){
+    .content__card--img-small:hover {
+        transform: translateY(0);
+      }
+}
+@media only screen and (max-width: 597px){
+    .content__card--img-large{
+        min-height: 350px;
+    }
+}
+
+@media only screen and (max-width: 419px){
+    .content__card--img-small{
+        min-height: 350px;
+    }
+    .content__card--text{
+        margin-bottom: 20px;
+    }
+    .content__card--text-first{
+        margin-bottom: 40px;
+    }
+   .social--wrapper{
+       padding-top: 32px;
+       margin-bottom: 42px;
+   }
+   .personal{
+       padding-bottom: 67px;
+    }
+}
