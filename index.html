@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="background">
+        <img class="background background--image" src="images/background.jpg"></img>
+      </div>
+      <div class="block">
+        <div class="block__inner">
+          <div class="button">
+            <div class="button__wrapper">
+              <a class="button button--google" href="#">Sign in with Google</a>
+              <a class="button button--apple" href="#">Sign in with Apple</a>
+            </div>
+          </div>
+          <div class="line">
+            <span class="line line--left"></span>
+            <span class="line line--text">or</span>
+            <span class="line line--right"></span>
+          </div>
+          <form class="form" onsubmit="alert('success')">
+            <input class="input input--email" type="email" placeholder="example@email.com" required>
+            <input class="input input--password" type="password" placeholder="Password" required>
+            <input class="input input--first-name" type="text" placeholder="First name" required>
+            <input class="input input--last-name" type="text" placeholder="Last name" required>
+            
+            <label class="radio radio__label" for="female">
+              <input class="radio radio__input--box" name="radiobutton" id="female" value="female" type="radio"
+                required>
+              <span class="radio radio__input--style"></span>&nbsp&nbsp&nbsp&nbsp&nbsp
+              Female
+            </label>
+            <label class="radio radio__label radio__label--male" for="male">
+              <input class="radio radio__input--box" name="radiobutton" id="male" value="male" type="radio"
+                checked="checked" required>
+              <span class="radio radio__input--style"></span>&nbsp&nbsp&nbsp&nbsp&nbsp
+              Male
+            </label>
+
+            <input class="input input__date" type="date" placeholder="Date of Birth" required>
+            <div class="list__wrapper">
+              <span class="list__arrow"></span>
+              <input class="input input__list" list="countries" value="" type="text" placeholder="Country" required>
+
+              <datalist class="input input__list-countries" id="countries">
+                <option value="Latvia">
+                <option value="Sweden">
+                <option value="Norway">
+                <option value="Finland">
+                <option value="Germany">
+              </datalist>
+            </div>
+            <div class="checkbox">
+              <label class="checkbox checkbox--label" for="news">
+                <input class="checkbox checkbox--box" id="news" name="news" type="checkbox" required>
+                <span class=" checkbox checkbox--style"></span>
+                Subscribe to News                
+              </label>
+              <label class="checkbox checkbox--label" for="devil">
+                <input class="checkbox checkbox--box" id="devil" name="devil" type="checkbox" checked="checked"
+                  required>
+                <span class="checkbox checkbox--style"></span>
+                Sell soul to the Devil
+              </label>
+            </div>            
+            <button class="button button__submit" type="submit" value="submit">Join us</button>
+          </form>
+          <div class="footer">
+            <a class="footer__link" href="#">Already a member?</a>
+            <button class="footer__button">Sign in.</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</body>
+
+</html>
